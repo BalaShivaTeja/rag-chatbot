@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    container_name: rag_backend
+    volumes:
+      - ./backend/app:/app/app
+      - ./chroma_db:/app/chroma_db
+      - /tmp/rag_uploads:/tmp/rag_uploads
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_DIR=/app/chroma_db
+    ports:
+      - "8000:8000"
