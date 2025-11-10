@@ -1,0 +1,9 @@
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+langchain==0.0.334
+openai==1.33.0
+chromadb==0.3.32
+python-multipart==0.0.6
+pydantic==1.10.11
+aiofiles==23.1.0
+requests==2.31.0
